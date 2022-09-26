@@ -3,7 +3,6 @@ const { app, BrowserWindow, ipcMain, nativeTheme } = require("electron");
 const path = require("path");
 
 const createWindow = () => {
-  console.log("DirName---", __dirname);
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1600,
@@ -38,6 +37,8 @@ const createWindow = () => {
 
   // and load the index.html of the app.
   mainWindow.loadFile("index.html");
+  // load from url
+  // mainWindow.loadURL("http://localhost:3000/");
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
